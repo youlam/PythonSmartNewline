@@ -1,0 +1,128 @@
+[
+    { "keys": ["enter"], "command": "python_smart_newline", "args": {"where": "eol"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["shift+enter"], "command": "python_smart_newline", "args": {"where": "here"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["alt+enter"], "command": "python_smart_newline", "args": {"where": "eol", "restorative": true}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["="], "command": "python_smart_binary_operator", "args": {"which": "="}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["!"], "command": "python_smart_binary_operator", "args": {"which": "!"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["+"], "command": "python_smart_binary_operator", "args": {"which": "+"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["-"], "command": "python_smart_binary_operator", "args": {"which": "-"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["*"], "command": "python_smart_binary_operator", "args": {"which": "*"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["/"], "command": "python_smart_binary_operator", "args": {"which": "/"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["%"], "command": "python_smart_binary_operator", "args": {"which": "%"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": [">"], "command": "python_smart_binary_operator", "args": {"which": ">"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["<"], "command": "python_smart_binary_operator", "args": {"which": "<"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["<"], "command": "python_smart_binary_operator", "args": {"which": "<"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["\\"], "command": "python_backslash", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["'"], "command": "python_quote_insert", "args": {"which": "'"}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["\""], "command": "python_quote_insert", "args": {"which": "\""}, "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["T"], "command": "python_insert_true", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" },
+        { "key": "python_all_selections_true_false_replaceable", "operator": "equal", "operand": true }
+    ]},
+
+    { "keys": ["F"], "command": "python_insert_false", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" },
+        { "key": "python_all_selections_true_false_replaceable", "operator": "equal", "operand": true }
+    ]},
+
+    { "keys": ["i"], "command": "python_insert_import", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" },
+        { "key": "python_import_keyword_appropriate", "operator": "equal", "operand": true }
+    ]},
+
+    { "keys": ["f"], "command": "python_insert_from", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" },
+        { "key": "python_from_keyword_appropriate", "operator": "equal", "operand": true }
+    ]},
+
+    // forward- and backward-commenting:
+    { "keys": ["super+forward_slash"], "command": "python_forward_toggle_comment", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" },
+        { "key": "not_exists_multiline_selection", "operator": "equal", "operand": true }
+    ]},
+
+    { "keys": ["super+forward_slash"], "command": "close_panel_and_python_forward_toggle_comment", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": true },
+        { "key": "selector", "operator": "equal", "operand": "source.python" },
+        { "key": "not_exists_multiline_selection", "operator": "equal", "operand": true }
+    ]},
+
+    { "keys": ["shift+super+forward_slash"], "command": "python_backward_toggle_comment", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": false },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+
+    { "keys": ["shift+super+forward_slash"], "command": "close_panel_and_python_backward_toggle_comment", "context": [
+        { "key": "panel_visible", "operator": "equal", "operand": true },
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
+    ]},
+]
